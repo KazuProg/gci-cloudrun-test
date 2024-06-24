@@ -1,0 +1,17 @@
+services:
+  app:
+    build: .
+    #restart: always
+    environment:
+      - TZ=Asia/Tokyo
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - var:/var/lib/app
+      # for Development
+      - ./src:/app
+    #entrypoint: tail -f /dev/null
+    ports:
+      - 8000:80
+
+volumes:
+  var:

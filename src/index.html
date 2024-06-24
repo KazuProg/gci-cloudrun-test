@@ -1,0 +1,32 @@
+<style>
+	img {
+		border: solid 1px #000;
+	}
+</style>
+<button onclick="reloadPlugin()">ReloadPlugin</button>
+<button onclick="reloadConfig()">ReloadConfig</button>
+<button onclick="reloadImage()">ReloadImage</button><br>
+<br><br>
+<img>
+<script>
+	function reloadPlugin() {
+		fetch("./load_plugin")
+			.then(r => r.text())
+			.then(b => {
+				console.log(b)
+				reloadImage()
+			})
+	}
+	function reloadConfig() {
+		fetch("./load_config")
+			.then(r => r.text())
+			.then(b => {
+				console.log(b)
+				reloadImage()
+			})
+	}
+	function reloadImage() {
+		document.querySelector("img").src = "./e-paper.bmp?" + +(new Date())
+	}
+	reloadImage()
+</script>

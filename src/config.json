@@ -1,0 +1,44 @@
+{
+	"server": {
+		"port": 80
+	},
+	"display": {
+		"size": [
+			800,
+			480
+		],
+		"ip": "192.168.1.206"
+	},
+	"parts": [
+		{
+			"type": "date",
+			"x": 0,
+			"y": 0,
+			"w": 800,
+			"h": 240,
+			"option": {
+				"format": "%m/%d(%jpw)",
+				"fontsize": 128
+			}
+		},
+		{
+			"type": "time",
+			"x": 0,
+			"y": 120,
+			"w": 800,
+			"h": 240,
+			"option": {
+				"format": "%H:%M",
+				"fontsize": 256
+			}
+		},
+		{
+			"type": "weather-now",
+			"x": 550,
+			"y": 10,
+			"w": 250,
+			"h": 120,
+			"option": {}
+		}
+	]
+}
