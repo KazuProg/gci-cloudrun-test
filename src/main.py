@@ -21,7 +21,7 @@ config_path = "config.json"
 plugin = {}
 config = None
 
-LISTEN_PORT = os.getenv("PORT", 80)
+LISTEN_PORT = int(os.getenv("PORT", 80))
 
 
 def application(environ, start_response):

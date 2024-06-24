@@ -2,10 +2,6 @@ services:
   app:
     build: .
     #restart: always
-    environment:
-      - TZ=Asia/Tokyo
-      - PYTHONUNBUFFERED=1
-      - PORT=80
     volumes:
       - var:/var/lib/app
       # for Development
