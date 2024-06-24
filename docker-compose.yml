@@ -11,7 +11,7 @@ services:
       - ./src:/app
     #entrypoint: tail -f /dev/null
     ports:
-      - 8000:80
+      - 8080:8080
 
 volumes:
   var:
