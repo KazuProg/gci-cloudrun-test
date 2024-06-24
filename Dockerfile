@@ -2,7 +2,6 @@ FROM python:slim
 
 ENV TZ=Asia/Tokyo
 ENV PYTHONUNBUFFERED=1
-ENV PORT=8080
 
 # locales-allだと420.29MBだが、これだと211.52MBになる
 RUN apt-get update && \
