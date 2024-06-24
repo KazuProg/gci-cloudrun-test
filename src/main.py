@@ -21,6 +21,8 @@ config_path = "config.json"
 plugin = {}
 config = None
 
+LISTEN_PORT = os.getenv("PORT", 80)
+
 
 def application(environ, start_response):
     if environ["PATH_INFO"] == "/":
@@ -151,7 +153,7 @@ def log(message):
 
 
 def run_server():
-    httpd = wsgiref.simple_server.make_server("", config["server"]["port"], application)
+    httpd = wsgiref.simple_server.make_server("", LISTEN_PORT, application)
     httpd.serve_forever()
 
 
